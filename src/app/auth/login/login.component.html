@@ -1,0 +1,26 @@
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()" type="">
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="form2Example1" class="form-control" formControlName="email" />
+    <label class="form-label" for="form2Example1">Email address</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form2Example2" class="form-control" formControlName="password" />
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
+
+  <!-- error message -->
+  <div *ngIf="firebaseErrorMessage != ''" class="error-style">
+      <span>{{ firebaseErrorMessage }}</span>
+  </div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Log in</button>
+
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Not yet signed up? <a routerLink="/signup">Sign up</a></p>
+  </div>
+</form>
