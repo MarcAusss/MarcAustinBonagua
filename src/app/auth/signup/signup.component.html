@@ -1,28 +1,24 @@
 <form [formGroup]="signupForm" (ngSubmit)="signup()">
+  <div class="flex justify-center items-center w-[95vw] h-[80vh]">
+  <div class="bg-blue-300 px-20 py-20">
+    <div class="">
+      <label class="form-label" for="name">Name</label><br>
+      <input type="name" id="name" class="border-b-2 border-blue-900 bg-transparent outline-none mb-3" formControlName="displayName" />
+    </div>
   
-  <!-- Name input -->
-  <div class="form-outline mb-4">
-     <input type="name" id="name" class="form-control" formControlName="displayName" />
-     <label class="form-label" for="name">Name</label>
-   </div>
- 
- <!-- Email input -->
- <div class="form-outline mb-4">
-   <input type="email" id="form2Example1" class="form-control" formControlName="email" />
-   <label class="form-label" for="form2Example1">Email address</label>
- </div>
+  <div class="">
+    <label class="form-label" for="form2Example1">Email address</label><br>
+    <input type="email" id="form2Example1" class="border-b-2 border-blue-900 bg-transparent outline-none mb-3" formControlName="email" />
+  </div>
 
- <!-- Password input -->
- <div class="form-outline mb-4">
-   <input type="password" id="form2Example2" class="form-control" formControlName="password" />
-   <label class="form-label" for="form2Example2">Password</label>
- </div>
+  <div class="">
+    <label class="form-label" for="form2Example2">Password</label><br>
+    <input type="password" id="form2Example2" class="border-b-2 border-blue-900 bg-transparent outline-none mb-3" formControlName="password" />
+  </div>
 
- <!-- error message -->
- <div *ngIf="firebaseErrorMessage != ''" class="error-style">
-     <span>{{ firebaseErrorMessage }}</span>
- </div>
-
- <!-- Submit button -->
- <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+<div class="text-center">
+  <button type="submit" class="bg-blue-900 px-6 py-2 text-white rounded-md">Sign up</button>
+</div>
+    </div>
+</div>
 </form>

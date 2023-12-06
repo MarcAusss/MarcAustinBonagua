@@ -1,25 +1,28 @@
 <!-- forms to create a new post -->
-<h1 *ngIf="editMode == false">Create Post</h1>
-<h1 *ngIf="editMode == true">Edit Post</h1><br><br>
-
+<h1 class="text-center text-3xl w-[95vw]" *ngIf="editMode == false">Create Post</h1>
+<h1 class="text-center text-3xl w-[95vw]" *ngIf="editMode == true">Edit Post</h1>
+<div class="flex justify-center items-center w-[95vw] h-[80vh]">
+  <div class="bg-blue-300 px-20 py-10">
 <form  (ngSubmit)="onsubmit()" [formGroup]="form">
-    <div class="form-row">
-      <div class="form-group col-md-6">
+    <div class="">
+      <div class="">
         <label for="title">Title</label>
-        <input type="email" class="form-control" id="title" placeholder="" formControlName="title">
-      </div><br>
-      <div class="form-group col-md-6">
+    <input type="email" class="w-full border-b-2 border-blue-900 bg-transparent outline-none mb-3" id="title" placeholder="" formControlName="title">
+      </div>
+      <div class="">
         <label for="image">Image</label>
-        <input type="text" class="form-control" id="image" placeholder="" formControlName="imgPath">
-        <img src="{{form.value.imagPath}}" alt=""><br>
+        <input type="text" class="w-full border-b-2 border-blue-900 bg-transparent outline-none mb-3" id="image" placeholder="" formControlName="imgPath">
+        <img src="{{form.value.imagPath}}" alt="">
       </div>
     </div>
-    <div class="form-group col-md-10">
+    <div class="">
       <label for="description">Description</label>
-      <input type="text" class="form-control" id="description" placeholder="" formControlName="description">
+      <input type="text" class="w-full border-b-2 border-blue-900 bg-transparent outline-none mb-3" id="description" placeholder="" formControlName="description">
     </div>
     
-    <br><br>
-    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Save</button> |
-    <button type="reset"  class="btn btn-danger" routerLink="/home">Cancel</button>
-  </form>
+    
+    <button type="submit" class="" [disabled]="form.invalid">Save</button> |
+    <button type="reset"  class="" routerLink="/home">Cancel</button>
+    </form>
+  </div>
+</div>

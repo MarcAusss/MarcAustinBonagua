@@ -1,26 +1,23 @@
 <form [formGroup]="loginForm" (ngSubmit)="loginUser()" type="">
-  <!-- Email input -->
+  <div class="flex justify-center items-center w-[95vw] h-[80vh]">
+    <div class="bg-blue-300 px-20 py-20">
   <div class="form-outline mb-4">
-    <input type="email" id="form2Example1" class="form-control" formControlName="email" />
-    <label class="form-label" for="form2Example1">Email address</label>
+    <label class="form-label" for="form2Example1">Email address</label><br>
+    <input type="email" id="form2Example1" class="w-full border-b-2 border-blue-900 bg-transparent outline-none mb-3" formControlName="email" />
   </div>
 
-  <!-- Password input -->
   <div class="form-outline mb-4">
-    <input type="password" id="form2Example2" class="form-control" formControlName="password" />
-    <label class="form-label" for="form2Example2">Password</label>
+    <label class="form-label" for="form2Example2">Password</label><br>
+    <input type="password" id="form2Example2" class="w-full border-b-2 border-blue-900 bg-transparent outline-none mb-3" formControlName="password" />
   </div>
 
-  <!-- error message -->
-  <div *ngIf="firebaseErrorMessage != ''" class="error-style">
-      <span>{{ firebaseErrorMessage }}</span>
-  </div>
 
-  <!-- Submit button -->
+<div class="text-center">
   <button type="submit" class="btn btn-primary btn-block mb-4">Log in</button>
-
-  <!-- Register buttons -->
-  <div class="text-center">
-    <p>Not yet signed up? <a routerLink="/signup">Sign up</a></p>
+</div>
+  <div class="text-center flex gap-5">
+    <p>Not yet signed up?</p> <a routerLink="/signup">Sign up</a>
   </div>
+  </div>
+</div>
 </form>
